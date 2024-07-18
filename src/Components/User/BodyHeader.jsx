@@ -22,9 +22,11 @@ export default function BodyHeader() {
     <div className="container BodyHeader">
       <div className="HeaderImage">
         <Link to={"/"}>
+          
           <img src={imageSrc} alt="" />
         </Link>
       </div>
+
       <div>
         <div>
           <h3 className="ShopCategoryH3">Shop by Category</h3>

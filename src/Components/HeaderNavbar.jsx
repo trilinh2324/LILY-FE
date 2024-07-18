@@ -1,27 +1,24 @@
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import "../Components/HeaderNavbar.css";
-import { BsMinecart } from "react-icons/bs";
-import { GiSelfLove } from "react-icons/gi";
-import { AiOutlineUser } from "react-icons/ai";
-import { Link } from "react-router-dom";
-import { IoMdLogOut } from "react-icons/io";
-import {GrUserAdmin} from "react-icons/gr"
-import { useContext, useState } from "react";
-import UserContext from "./User/UserContext";
-import Badge from "react-bootstrap/Badge";
-
-
-
-
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { BsMinecart } from 'react-icons/bs';
+import { AiOutlineUser } from 'react-icons/ai';
+import { IoMdLogOut } from 'react-icons/io';
+import { useContext, useState } from 'react';
+import UserContext from './User/UserContext';
+import Badge from 'react-bootstrap/Badge';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import logo1 from '../Components/Image/logo-kimtim2.png';
+import '../Components/HeaderNavbar.css';
+import { BiCube } from "react-icons/bi";
+import { CiSearch } from "react-icons/ci";
 function HeaderNavbar({ cartItems }) {
-  const { loginStatus,setLoginStatus } = useContext(UserContext);
-
+  const { loginStatus, setLoginStatus } = useContext(UserContext);
   const [searchInput, setSearchInput] = useState("");
 
-  const handleLogout=()=>{
-    setLoginStatus("logout")
-  }
+  const handleLogout = () => {
+    setLoginStatus("logout");
+  };
 
   function handleSearch() {
     if (searchInput.toLowerCase().includes("sofa")) {
@@ -32,143 +29,117 @@ function HeaderNavbar({ cartItems }) {
       return "/table";
     } else if (searchInput.toLowerCase().includes("product")) {
       return "/products";
-    }
-    else if (searchInput.toLowerCase().includes("bed")) {
+    } else if (searchInput.toLowerCase().includes("bed")) {
       return "/bed";
     }
   }
 
+  const toggleButtonActiveState = (event) => {
+    event.preventDefault();
+    const button = event.target;
+    button.classList.toggle('active');
+  };
+
   return (
     <Navbar expand="lg" variant="light" bg="light">
       <Container>
+      <div class="div-class">
+    <span class="content">Mang đến cho bạn sản phẩm và dịch vụ cấp cao</span>
+  </div>
         <div className="Nav-bar">
           <div className="left-section">
-            <input
-              className="input-Search"
-              type="text"
-              placeholder="Search"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-            />
-            <Link
-              to={handleSearch()}
-              className="Search-btn linkWithoutDecoration"
-            >
-              Search
-            </Link>
-          </div>
-
-          <div className="center-section">
             <Link className="logo" to="/">
-              AJ Furniture
+              <img
+                src={logo1}
+                alt="Logo"
+                style={{ width: '100px', height: '80px', paddingLeft: '40px', paddingTop: '15px' }}
+              />
             </Link>
           </div>
 
+          <form id="search-form" action="/search" method="get">
+      <div className="search-container">
+        <CiSearch className="search-icon" />
+        <input type="text" id="search-input" name="query" placeholder="Tìm kiếm sản phẩm..." />
+      </div>
+    </form>
           <div className="right-section">
-            {loginStatus === "success" ? (
-              <Link className="login-logo" to="/" onClick={handleLogout}>
-                <IoMdLogOut />
-              </Link>
-            ) : (
-              <Link className="login-logo" to="/login">
-                <AiOutlineUser />
-              </Link>
-            )}
-
-            <Link className="wishlist-logo" to="/wishlist">
-              <GiSelfLove />
-            </Link>
-
-            <Link className="cart-logo" to="/cart">
+            {/* <div>
+              <a>Tư vấn bán hàng</a>
+              <br />
+              <a>84+ 339 806 596</a>
+            </div> */}
+            {/* <div>
+              <a>Hotline</a>
+              <br />
+              <a>84+ 339 806 596</a>
+            </div> */}
+            {/* <div>
+              <a>Sale</a>
+              <br />
+              <a>tin tức</a>
+            </div> */}
+           <button className="hoverable-button">
+  {loginStatus === "success" ? (
+    <Link className="login-logo link-text" to="/" onClick={handleLogout}>
+      <IoMdLogOut />
+    </Link>
+  ) : (
+    <Link className="login-logo link-text" to="/login">
+      <AiOutlineUser />
+      Tài khoản
+    </Link>
+  )}
+</button>
+<button className="hoverable-button">
+  <Link className="cart-logo link-text" to="/">
+    <BiCube />
+    Sản phẩm đã xem
+  </Link>
+</button>
+            <Link style={{ color: 'black' }} className="cart-logo" to="/cart">
               <BsMinecart />
               <Badge pill bg="secondary" className="cart-badge">
                 {cartItems.length}
               </Badge>
             </Link>
-            <Link className="admin-logo" to='/adminlogin'>
-             <GrUserAdmin />
-            </Link>
           </div>
-        </div>
-
-        <div className="navbar-second-line">
-          <a className="link-text" href="/home">
-            Find a Studio
-          </a>
-          <a className="link-text" href="/home">
-            Track Your Order
-          </a>
-          <a className="link-text" href="/home">
-            Buy in Bulk
-          </a>
-          <a className="link-text" href="/home">
-            Contact Us
-          </a>
         </div>
 
         <div className="thrid-nav">
-          <div className="navbar-thrid-line">
-            <Link to="/" className="service-text">
-              Furniture
-              <div className="dropdown-list">
-                <ul>
-                  <li>
-                    {" "}
-                    <Link className="linkWithoutDecoration" to="/sofa">
-                      Sofa
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="linkWithoutDecoration" to="/table">
-                      Table
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="linkWithoutDecoration" to="/chair">
-                      Chair
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="linkWithoutDecoration" to="/bed">
-                      Bed
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Link>
-
-            <a className="service-text" href="/">
-              Home Decor
-              <div className="dropdown-list">
-                <ul>
-                  <li>Photoframe</li>
-                  <li>Wall Art</li>
-                </ul>
-              </div>
-            </a>
-            <a className="service-text" href="/">
-              Dining Set
-              <div className="dropdown-list">
-                <ul>
-                  <li>Dinnerware</li>
-                  <li>Cakeware</li>
-                </ul>
-              </div>
-            </a>
-            <a className="service-text" href="/">
-              Lamps & Lighting
-            </a>
-            <a className="service-text" href="/">
-              Home Utility
-            </a>
-            <a className="service-text" href="/">
-              Modular
-            </a>
-
-            <Link className="service-text linkWithoutDecoration" to="/products">
-              All Products
-            </Link>
-          </div>
+          <Link to="/" className="service-text">
+           VÒNG TAY
+          </Link>
+          <a className="service-text" href="/">
+            NHẪN
+          </a>
+          <a className="service-text" href="/">
+            DÂY CHUYỀN
+          </a>
+          <a className="service-text" href="/">
+            BÔNG TAI
+          </a>
+          <a className="service-text" href="/">
+            KHUYÊN XỎ
+          </a>
+          <a className="service-text" href="/">
+            TRANG SỨC ĐÔI
+          </a>
+          <a className="service-text" href="/">
+            TRANG SỨC BỘ
+          </a>
+          <a className="service-text" href="/">
+            PHONG THỦY
+          </a>
+          <a className="service-text" href="/">
+            QUÀ TẶNG
+          </a>
+          <a className="service-text" href="/">
+            PHỤ KIỆN
+          </a>
+          <a className="service-text" href="/">
+            SẢN PHẨM MỚI
+          </a>
         </div>
       </Container>
     </Navbar>

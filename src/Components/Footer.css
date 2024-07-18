@@ -1,22 +1,33 @@
 h4,
 h3 {
-  color: rgb(254, 254, 253);
+  color: rgb(0, 0, 0);
 }
 
 p {
-  color: bisque;
+  color: rgb(0, 0, 0);
 }
 
 .footerList .linkWithoutDecoration {
-  color: beige;
+  color: rgb(0, 0, 0);
 }
 
 .copyRight .linkWithoutDecoration {
-  color: white;
+  color: rgb(0, 0, 0);
 }
-
+.linkWithoutDecoration{
+  cursor: pointer;
+}
+.linkWithoutDecoration:hover{
+  color: red;
+}
+a{
+  cursor: pointer;
+}
+a:hover{
+  color: red;
+}
 .Footer {
-  background-color: rgb(69, 69, 69);
+  background-color: rgb(255, 255, 255);
   margin-top: 70px;
   justify-content: space-between;
   padding-left: 20px;

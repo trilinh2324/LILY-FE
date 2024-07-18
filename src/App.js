@@ -87,27 +87,27 @@ function App() {
           <Route path="/login" element={<Login  />} />
           <Route path='/register' element={<UserRegister />} />
           <Route path='/' element={<BodyHeader />} />
-          <Route path='/products' element={<Products />} />
+          {/* <Route path='/products' element={<Products />} />
           <Route path='/sofa' element={<Sofa />} />
           <Route path='/chair' element={<Chair />} />
           <Route path='/table' element={<Table />} />
           <Route path='/bed' element={< Bed />} />
           <Route path='/products/:productId'  element={< ViewProduct  handleAddtoCart={handleAddtoCart} handleAddtoWishlist={handleAddtoWishlist} />} />
           <Route path='/cart' element={< Cart cartItems={cartItems} removeFromCart={removeFromCart} />} />
-          <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} />
+          <Route path='/wishlist' element={<Wishlist wishlistItems={wishlistItems} removeFromWishList={removeFromWishList} />} /> */}
 
           {/* <Route path='/admin' element={ <AdminBody />} /> */}
           {/* <Route path='/admin/product' element={ <AdminProducts />} /> */}
-          <Route path='/adminlogin' element={<AdminLogin /> }></Route>
+          {/* <Route path='/adminlogin' element={<AdminLogin /> }></Route>
           <Route path='/admin' element={<AdminSidebar /> }>
             
             <Route path='/admin/products' element={<AdminProduct />}></Route>
             <Route path='/admin/user' element={<UserAdmin />}></Route>
            
             <Route path='/admin/addproduct' element ={<AdminAddProduct handleAddProduct={handleAddProduct} />}></Route>
-            <Route path='/admin/edit/:productId' element={<AdminEdit  setProducts={setProducts}/>}></Route>
+            <Route path='/admin/edit/:productId' element={<AdminEdit  setProducts={setProducts}/>}></Route> */}
 
-          </Route>
+          {/* </Route> */}
         </Routes>
         {RenderHeaderAndFooter && <Footer /> } 
         

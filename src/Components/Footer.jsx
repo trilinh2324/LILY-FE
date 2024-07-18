@@ -1,4 +1,9 @@
 import React from "react";
+import logo1 from '../Components/Image/logo-kimtim2.png';
+import { FiPhone } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
+import { GrLocation } from "react-icons/gr";
+import { MdAccessTime } from "react-icons/md";
 import {
   MDBFooter,
   MDBContainer,
@@ -20,145 +25,170 @@ export default function Footer() {
           <MDBRow className="mt-3">
             <div className="FooterFirstSession">
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h4 className="text-uppercase fw-bold mb-4">Corporate</h4>
+                <div className="footerList">
+                <Link className="logo" to="/">
+              <img
+                src={logo1}
+                alt="Logo"
+                style={{ width: '200px', height: '180px', paddingLeft: '40px', paddingTop: '15px' }}
+              />
+            </Link>
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    <FiPhone />
+                    <a> +84 339 806 596 (Chính)</a>
+                  
+                  {" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    <FiPhone />
+                    <a> +84 866 093 764 (Phụ)</a>
+                  
+                  {" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    <AiOutlineMail />
+                    <a> trilinh2132k4@gmail.com</a>
+                  {" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    <GrLocation />
+                    <a> Quảng Xương, Thanh Hóa</a>
+                  {" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    <MdAccessTime />
+                    <a> Thứ 2 - Thứ 6</a>
+                  {" "}
+                  </Link>{" "}
+                </div>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                <h4 className="text-uppercase fw-bold mb-4">DỊCH VỤ KHÁCH HÀNG</h4>
                 <div className="footerList">
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    About Us{" "}
+                 Điều khoản và điều kiện{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Corporate Governance{" "}
+                    Chính sách trả hàng hoàn tiền{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    AJFurniture in the News{" "}
+                    Chính sách giao hàng{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Careers
+                    Chính sách quyền riêng tư
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Hướng dẫn mua hàng online{" "}
                   </Link>
                 </div>
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h4 className="text-uppercase fw-bold mb-4">Useful Links</h4>
+                <h4 className="text-uppercase fw-bold mb-4">CẨM NANG SỬ DỤNG</h4>
                 <div className="footerList">
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Explore Gift & Cards{" "}
+                    Tại sao nên chọn bạc cao cấp?{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Buy in Bulk{" "}
+                    Cách làm trắng bạc tại nhà{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Discover Our Brands{" "}
+                    Phân biệt các loại bạc S925, S999,...{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Check Out Bonhomie,Our Blog
+                    Những tác dụng của bạc{" "}
                   </Link>{" "}
-                  <br />
+                  <br /> <br />
                   <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    Find a Studio{" "}
+                    Cách bảo quản trang sức bạc{" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  
+                </div>
+              </MDBCol>
+
+              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                <h4 className="text-uppercase fw-bold mb-4">THÔNG TIN CHUNG</h4>
+                <div className="footerList">
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Tin trang sức{" "}
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Quyền lợi thành viên
+                  </Link>{" "}
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Tiếp thị liên kết LiLy
+                  </Link>
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Ưu đãi khi đánh giá
+                  </Link>
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Nhận quà tri ân
+                  </Link>
+                  <br /> <br />
+                  <Link className="linkWithoutDecoration" to="/home">
+                    {" "}
+                    Liên hệ
                   </Link>
                 </div>
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h4 className="text-uppercase fw-bold mb-4">Partner With Us</h4>
-                <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Sell on AJ Furniture{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Become a Feanchisee{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Become Our Channel Partner{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Become Our Pep Homie{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Our Marketplace Policies{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Merchant Dashboard Login
-                  </Link>
-                </div>
-              </MDBCol>
-
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h4 className="text-uppercase fw-bold mb-4">Need Help?</h4>
-                <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    FAQs{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Policies
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/home">
-                    {" "}
-                    Contact Us
-                  </Link>
-                </div>
-              </MDBCol>
-
-              <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+              <div className="footerList">
                 <h4 className="text-uppercase fw-bold mb-4">
-                  Download our App
+                Ý KIẾN ĐÓNG GÓP
                 </h4>
-                <div className="footerList">
-                  <Link className="linkWithoutDecoration" to="/">
+              
+                <Link className="linkWithoutDecoration" to="/home">
                     {" "}
-                    <img
-                      className="App-img"
-                      src={
-                        "https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-apple-appstore-logo_2x.png"
-                      }
-                      alt=""  />{" "}
-                  </Link>{" "}
-                  <br />
-                  <Link className="linkWithoutDecoration" to="/">
-                    {" "}
-                    <img
-                      className="App-img"
-                      src={
-                        "https://ii2.pepperfry.com/media/wysiwyg/banners/web22-footer-google-playstore-logo_2x.png"
-                    }
-                    alt="" />{" "}
-                  </Link>{" "}
-                  <br />
-                </div>
+                    LiLy luôn mong nhận được ý kiến  <br />
+                    đóng góp từ bạn để nâng cấp dịch <br />
+                     vụ và sản phẩm tốt hơn.Nếu bạn <br />
+                     có ý kiến, đừng ngần ngại đóng <br />
+                     góp cho LiLy nhé. LiLy xin cảm ơn!
+                  </Link>
+                  </div>
               </MDBCol>
             </div>
 
-            <div className="FooterSecondSession">
+            {/* <div className="FooterSecondSession">
               <div className="categorySession">
                 <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
                   <Link to="/" className="linkWithoutDecoration">
@@ -215,11 +245,11 @@ export default function Footer() {
                   </Link>
                 </MDBCol>
               </div>
-            </div>
+            </div> */}
           </MDBRow>
         </MDBContainer>
       </section>
-      <div className="ThirdSessionMain">
+      {/* <div className="ThirdSessionMain">
         <div className="ThirdSession">
           <div className="ThirdSessionLeft">
             <div className="HeadingAccept">
@@ -284,15 +314,15 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="copyRight text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)", color: "white" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)", color: "black" }}
       >
-        © 2021 Copyright:
+        © 2024 Copyright: 
         <Link to="/" className="linkWithoutDecoration">
-          AJ Furniture
+          LILY JEWELRY
         </Link>
       </div>
     </MDBFooter>
